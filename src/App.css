@@ -1,0 +1,129 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.field input {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: #ddd;
+  }
+}
+
+.width-s {
+  max-width: 20ch;
+}
+
+.width-m {
+  max-width: 40ch;
+}
+
+.width-lg {
+  max-width: 40ch;
+}
+
+.height-l1 {
+  height: 1lh;
+}
+
+.height-l2 {
+  height: 2lh;
+}
+
+.height-l3 {
+  height: 3lh;
+}
+
+.height-l5 {
+  height: 5lh;
+}
+
+.container {
+  margin-inline: auto;
+}
+
+.text-s {
+  font-size: 0.8rem;
+}
+
+.text-m {
+  font-size: 1rem;
+}
+
+.text-l {
+  font-size: 1.2rem;
+}
+
+.text-xl {
+  font-size: 1.4rem;
+}
+
+.text-xxl {
+  font-size: 2.8rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.weight-light {
+  font-weight: 300;
+}
+
+.weight-normal {
+  font-weight: 400;
+}
+
+.weight-bold {
+  font-weight: 700;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-s {
+  gap: 0.25em;
+}
+
+.gap-m {
+  gap: 0.5em;
+}
+
+.gap-l {
+  gap: 1em;
+}
+
+.gap-xl {
+  gap: 2em;
+}
+
+.grapheme.silent {
+  opacity: 0.25;
+}

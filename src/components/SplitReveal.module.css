@@ -1,0 +1,11 @@
+.wrapper {
+    display: inline-flex;
+    flex-direction: row;
+    white-space: nowrap;
+	overflow: hidden;
+}
+
+.item {
+    display: inline-block;
+    white-space: pre;
+}
