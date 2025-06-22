@@ -43,5 +43,5 @@ const isGraphemeSilent: Record<string, (graphemes: string[], index: number, word
 
     // "b" before a "t" is silent.
     // Add 'word' to signature even if not used, for consistency.
-    'b': (graphemes, index, word) => (graphemes[index + 1] === 't'),
+    'b': (graphemes, index, _word) => (graphemes[index + 1] === 't'),
 }
