@@ -4,22 +4,11 @@ import { useMemo } from "react";
 import { bouncy } from "../lib/fx/transitions";
 
 import style from "./SplitReveal.module.css";
-import type { Transition, Variant } from "motion";
+import type { Transition } from "motion";
 import { cx } from "../lib/cx";
-
-type VariantKeys = "hidden" | "visible";
-type RevealVariants = Record<VariantKeys, Variant>;
+import { popDown, type RevealVariants } from "./SplitReveal.variants";
 
 const defaultTransition: Transition = { ...bouncy };
-export const popDown: RevealVariants = {
-	hidden: { y: "-100%" },
-	visible: { y: 0 },
-};
-
-export const popUp: RevealVariants = {
-	hidden: { y: "100%" },
-	visible: { y: 0 },
-};
 
 type Props = React.ComponentProps<typeof motion.span> & {
 	staggerChildren?: number;

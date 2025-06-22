@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "check": "pnpm check:lint && pnpm check:types",
+    "check:lint": "eslint .",
+    "check:types": "tsc -b --noEmit",
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui"

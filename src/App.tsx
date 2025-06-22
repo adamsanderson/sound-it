@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import { splitGraphemes } from "./lib/splitGraphemes";
 import { WordForm } from "./WordForm";
-import { popUp, SplitReveal } from "./components/SplitReveal";
+import { SplitReveal } from "./components/SplitReveal";
+import { popUp } from "./components/SplitReveal.variants";
 
 function App() {
 	const [word, setWord] = useState("");
