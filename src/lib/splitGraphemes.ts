@@ -16,7 +16,7 @@ export function splitGraphemes(word: string): GraphemeMetadata[] {
     });
 }
 
-const loanWordsWithFinalE = new Set([
+const loanwordsWithFinalE = new Set([
     "recipe", "apostrophe", "catastrophe", "acne", "epitome", "vigilante", "sesame", "posse",
     "karate", "anemone", "hyperbole", "coyote", "epitome",
     "cafe", "touche", "protege", "saute",
@@ -27,14 +27,15 @@ const loanWordsWithFinalE = new Set([
  * For instance the "e" in "cake".
  * 
  * For graphemes like "mb" in "lamb", we return `false` since the "m" is still pronounced.
- * Another example that is pronounced is "sci" in "science".
+ * Another example is the "c" in "science", which is silent, but its grapheme is not, likewise with the "e"
+ * in the final "ce" grapheme.
  */
 const isGraphemeSilent: Record<string, (graphemes: string[], index: number, word: string) => boolean> = {
     // Final "e", as in cake, make, and broke.
     'e': (graphemes, index, word) => {
         const lastGrapheme = index === graphemes.length - 1;
         // Check if the original word is in the loanWordsWithFinalE set
-        const isLoanWord = loanWordsWithFinalE.has(word)
+        const isLoanWord = loanwordsWithFinalE.has(word)
 
         return lastGrapheme && !isLoanWord;
     },
