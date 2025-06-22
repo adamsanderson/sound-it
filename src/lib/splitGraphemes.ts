@@ -17,9 +17,10 @@ export function splitGraphemes(word: string): GraphemeMetadata[] {
 }
 
 const loanwordsWithFinalE = new Set([
-    "recipe", "apostrophe", "catastrophe", "acne", "epitome", "vigilante", "sesame", "posse",
-    "karate", "anemone", "hyperbole", "coyote", "epitome",
-    "cafe", "touche", "protege", "saute",
+    'acne', 'adobe', 'anemone', 'anime', 'apostrophe', 'cafe', 'catastrophe', 
+    'coyote', 'epitome', 'epitome', 'finale', 'forte', 'hyperbole', 'karate', 
+    'posse', 'posse', 'protege', 'recipe', 'sake', 'saute', 'sesame', 'touche', 
+    'vigilante'
 ])
 
 /**
@@ -42,5 +43,5 @@ const isGraphemeSilent: Record<string, (graphemes: string[], index: number, word
 
     // "b" before a "t" is silent.
     // Add 'word' to signature even if not used, for consistency.
-    'b': (graphemes, index, word) => (graphemes[index+1] === 't'),
+    'b': (graphemes, index, word) => (graphemes[index + 1] === 't'),
 }
